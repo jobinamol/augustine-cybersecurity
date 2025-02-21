@@ -1,14 +1,14 @@
 /* General Styles */
 :root {
     /* Professional color scheme */
-    --primary-color: #0066cc;     /* Professional blue */
-    --secondary-color: #2c3e50;   /* Dark blue-gray */
-    --accent-color: #00a8ff;      /* Light blue for highlights */
-    --dark-bg: #1a1a1a;          /* Dark background */
-    --dark-card: #1F1F1F;
-    --text-primary: #ffffff;      /* White text */
-    --text-secondary: #b3b3b3;    /* Light gray text */
-    --success-color: #00b894;     /* Professional green */
+    --primary-color: #0052cc;     /* Deeper blue */
+    --secondary-color: #1e293b;   /* Slate blue */
+    --accent-color: #00b8ff;      /* Bright blue */
+    --dark-bg: #0f172a;          /* Deep navy */
+    --dark-card: #1e293b;        /* Slate card */
+    --text-primary: #f8fafc;     /* Crisp white */
+    --text-secondary: #94a3b8;   /* Muted gray */
+    --success-color: #059669;    /* Professional green */
     --glass-bg: rgba(31, 31, 31, 0.8);
     --neon-blue: #00f7ff;
     --dark-blue: #001233;
@@ -218,12 +218,11 @@ body {
 
 /* Glassmorphism */
 .glass-card {
-    background: rgba(44, 62, 80, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 24px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(248, 250, 252, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .glass-card:hover {
@@ -234,10 +233,9 @@ body {
 
 /* Section Headers */
 .section-header {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
-    position: relative;
-    padding-bottom: 10px;
+    margin-bottom: 3rem;
+    font-size: 2.25rem;
+    text-align: center;
 }
 
 .section-header::after {
@@ -322,8 +320,8 @@ h4 i {
 }
 
 .timeline-item {
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
     border-left: 3px solid var(--primary-color);
 }
 
@@ -357,7 +355,7 @@ h4 i {
 }
 
 .timeline-content {
-    padding: 1.5rem;
+    padding: 0;
 }
 
 .timeline-content h3 {
@@ -384,9 +382,9 @@ h4 i {
 }
 
 .achievements li {
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
+    padding: 0.75rem 0;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
 }
 
 .achievements li::before {
@@ -414,6 +412,7 @@ h4 i {
 
 /* Tool cards */
 .tool-card {
+    padding: 1.5rem;
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -430,9 +429,11 @@ h4 i {
 }
 
 .tool-list li {
-    padding: 0.5rem 0;
-    color: var(--text-secondary);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background: rgba(248, 250, 252, 0.05);
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
 .tool-list li:last-child {
@@ -530,9 +531,10 @@ h4 i {
 }
 
 .contact-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    background: rgba(248, 250, 252, 0.05);
+    border-radius: 8px;
 }
 
 .contact-item i {
@@ -566,34 +568,18 @@ h4 i {
 }
 
 .social-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
-    color: var(--text-primary);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    margin: 0 0.75rem;
+    background: rgba(248, 250, 252, 0.08);
+    border-radius: 12px;
+    transition: all 0.4s ease;
 }
 
-.social-btn::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.social-btn:hover {
+    transform: translateY(-5px);
     background: var(--primary-color);
-    top: 0;
-    left: -100%;
-    transition: all 0.3s ease;
-    z-index: -1;
-}
-
-.social-btn:hover::before {
-    left: 0;
+    box-shadow: 0 5px 15px rgba(0, 82, 204, 0.3);
 }
 
 /* Form Styling */
@@ -706,14 +692,13 @@ h4 i {
     }
 
     .contact-item {
-        padding: 0.75rem;
-        border-radius: 6px;
+        padding: 1rem;
     }
 
     /* Timeline */
     .timeline-item {
-        padding: 1.25rem;
-        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     /* Tools Section */
@@ -741,10 +726,9 @@ h4 i {
     }
 
     .social-btn {
-        width: 100%;
-        height: 45px;
-        border-radius: 8px;
-        font-size: 1.1rem;
+        width: 42px;
+        height: 42px;
+        margin: 0 0.5rem;
     }
 
     .social-btn .hover-text {
@@ -753,6 +737,17 @@ h4 i {
         transform: none;
         margin-left: 0.5rem;
         font-size: 0.9rem;
+    }
+
+    /* Enhanced Mobile Grid */
+    .row {
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+    }
+
+    .col-md-6 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
     }
 }
 
@@ -1145,4 +1140,186 @@ footer {
     footer p {
         text-align: center;
     }
+}
+
+/* Professional Spacing and Layout */
+:root {
+    /* Enhanced Professional Colors */
+    --primary-color: #0052cc;     /* Deeper blue */
+    --secondary-color: #1e293b;   /* Slate blue */
+    --accent-color: #00b8ff;      /* Bright blue */
+    --dark-bg: #0f172a;          /* Deep navy */
+    --dark-card: #1e293b;        /* Slate card */
+    --text-primary: #f8fafc;     /* Crisp white */
+    --text-secondary: #94a3b8;   /* Muted gray */
+    --success-color: #059669;    /* Professional green */
+}
+
+/* Enhanced Section Spacing */
+section {
+    padding: 6rem 0;
+    position: relative;
+}
+
+/* Professional Card Spacing */
+.glass-card {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(248, 250, 252, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Timeline Layout */
+.timeline-item {
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-content {
+    padding: 0;
+}
+
+/* Professional List Spacing */
+.achievements li {
+    padding: 0.75rem 0;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+/* Enhanced Tool Cards */
+.tool-card {
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-list li {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background: rgba(248, 250, 252, 0.05);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Professional Contact Layout */
+.contact-item {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    background: rgba(248, 250, 252, 0.05);
+    border-radius: 8px;
+}
+
+/* Enhanced Social Icons */
+.social-btn {
+    width: 48px;
+    height: 48px;
+    margin: 0 0.75rem;
+    background: rgba(248, 250, 252, 0.08);
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    background: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 82, 204, 0.3);
+}
+
+/* Professional Mobile Layout */
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 0;
+    }
+
+    .glass-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline-item {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-item {
+        padding: 1rem;
+    }
+
+    .social-btn {
+        width: 42px;
+        height: 42px;
+        margin: 0 0.5rem;
+    }
+
+    /* Enhanced Mobile Grid */
+    .row {
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+    }
+
+    .col-md-6 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+/* Professional Typography Spacing */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.section-header {
+    margin-bottom: 3rem;
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+/* Enhanced Form Spacing */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    padding: 1rem 1.25rem;
+    height: auto;
+    font-size: 1rem;
+}
+
+/* Professional Button Spacing */
+.btn {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Enhanced Footer Layout */
+footer {
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+/* Professional Icon Alignment */
+i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+/* Enhanced Hover Effects */
+.glass-card:hover,
+.tool-list li:hover,
+.contact-item:hover {
+    transform: translateY(-3px);
+    background: rgba(248, 250, 252, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 82, 204, 0.15);
 } 
